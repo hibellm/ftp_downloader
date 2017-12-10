@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Test of a FTP Downloader app</h1>
+    <p class="lead">This application is built on the Python Flask framework</p>
+    <!-- {{current_time}} -->
+  </div>
+<br>
+
+<div class="ui segment">
+  {{x}}
+</div>
+<div class="ui segment">
+  {% for di,item in dirl,y %}
+    {{di}}/{{item}}<br>
+  {% endfor %}
+</div>
+
+
+{% for item in tup1 %}
+  {% if item == di %}
+  <p>{{tup2[loop.index]}} {{di}}</p>
+  {% else %}
+  <p> title not found {{tup2[loop.index]}} {{di}} </p>
+  {% endif %}
+
+{% endfor %}
+
+
+{{tup1}} {{tup2}}
+
+{{dir}}
+
+{% endblock %}

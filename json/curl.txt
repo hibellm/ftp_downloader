@@ -1,0 +1,1 @@
+curl -u TCRomh01:3hEjc1T1  ftp://moveit.accenture.com/SDTM Conversion Library/Converted Studies/AbbVie/Alzheimers Disease/NCT00948909/AbbVie_Alzheimers Disease_NCT00948909_20160331.zip
