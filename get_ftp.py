@@ -3,6 +3,7 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, request, logging
 import ssl,smtplib,ftplib
 from ftplib import FTP_TLS, FTP
+import itertools
 import socket
 import sys
 import urllib
@@ -20,11 +21,19 @@ app.config.update(
 @app.route('/')
 def test():
     # current_time=datetime.datetime.now()
-    # dict = ('nct_id': 'NCT01119859', 'title': 'This is a really good title!')
-    tup1 = ('NCT01119859', 'NCT09119859','NCT01119129')
-    tup2 = ('This is a really good title1!','This is a really good title2!','This is a really good title3!' )
+    #dict = ('nct_id': 'NCT01119859', 'title': 'This is a really good title!')
+    dict = [('NCT01119859','This is a really good title!')]
+    tup1 = ['NCT01119859', 'NCT09119859','NCT01119129']  # A LIST
+    print('This is the Tup1 data type',type(tup1))
+    tup2 = ['This is a really good title1!','This is a really good title2!','This is a really good title3!']
+    print('This is the Tup2 data type',type(tup2))
+
     dir='NCT01119859'
     dirl=('NCT09119859','NCT01119129')
+
+    dictionary = zip(tup1,tup2)
+    print(type(dictionary) )
+    print(dictionary)
 
     #WORKS SINGLE VALUE
     for i in range(0,len(tup1)):

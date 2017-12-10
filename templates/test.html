@@ -8,6 +8,26 @@
   </div>
 <br>
 
+dict= {{dict}}
+
+<ul>Looks good but how to get the data in asI need?
+{% for href, caption in [('NCT01119859', 'title1'), ('NCT01119129', 'title1'),('NCT09119859', 'title3')] %}
+   <li>{{ href }}/{{ caption }}</li>
+{% endfor %}
+
+not good, but I can get the data in as I want
+{% for href, caption in [(tup1,tup2)] %}
+    <li>{{ href }}/{{ caption }}</li>
+{% endfor %}
+</ul>
+
+trying the dictionary - get in there - it seems to work
+{% for href, caption in dictionary %}
+    <li>{{ href }}/{{ caption }}</li>
+{% endfor %}
+</ul>
+
+
 <div class="ui segment">
   {{x}}
 </div>
