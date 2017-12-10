@@ -27,6 +27,14 @@ trying the dictionary - get in there - it seems to work
 {% endfor %}
 </ul>
 
+trying the dictionary - and match vs a list
+{% for href, caption in dictionary %}
+    {% if item is sameas dir %}
+    <li>{{ href }}/{{ caption }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+
 
 <div class="ui segment">
   {{x}}
@@ -37,17 +45,25 @@ trying the dictionary - get in there - it seems to work
   {% endfor %}
 </div>
 
-
+<hr>The match works otherwise....looking good
+Trying to match on.... {{dir}}
 {% for item in tup1 %}
-  {% if item == di %}
-  <p>{{tup2[loop.index]}} {{di}}</p>
-  {% else %}
-  <p> title not found {{tup2[loop.index]}} {{di}} </p>
+  {% if item == dir %}
+  <p>{{tup2[loop.index0]}} {{dir}}</p>
   {% endif %}
-
 {% endfor %}
 
+<hr>
+<h1>Match list of NCT vs list of titles - works as well</h1>
+<h4>Trying to match on.... {{dirl}}</h4>
+{% for item in tup1 %}
+  {% for di in dirl %}
+  {% if item == di %}
+  <p>{{tup2[loop.index]}} {{di}}</p>
+  {% endif %}
+{% endfor %}{% endfor %}
 
+<hr>
 {{tup1}} {{tup2}}
 
 {{dir}}

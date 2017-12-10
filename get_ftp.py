@@ -28,12 +28,16 @@ def test():
     tup2 = ['This is a really good title1!','This is a really good title2!','This is a really good title3!']
     print('This is the Tup2 data type',type(tup2))
 
-    dir='NCT01119859'
+    dir='NCT09119859'
     dirl=('NCT09119859','NCT01119129')
 
     dictionary = zip(tup1,tup2)
     print(type(dictionary) )
     print(dictionary)
+
+
+
+
 
     #WORKS SINGLE VALUE
     for i in range(0,len(tup1)):
